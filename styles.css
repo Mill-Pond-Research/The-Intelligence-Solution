@@ -1,65 +1,271 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-    line-height: 1.6;
+/* Global styles */
+body {
+    background-color: #f3f4f6;
+    font-family: sans-serif;
 }
 
+/* Header styles */
+header {
+    background-color: white;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+header h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+header h2 {
+    font-size: 1.25rem;
+    color: #4b5563;
+    margin-top: 0.5rem;
+}
+
+header p {
+    font-size: 0.875rem;
+    color: #6b7280;
+    margin-top: 0.5rem;
+}
+
+/* Container styles */
 .container {
-    display: flex;
-    height: 100vh;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
-.sidebar {
-    width: 250px;
-    background-color: #f8f9fa;
-    padding: 20px;
-    overflow-y: auto;
+/* Search input styles */
+#search-input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #d1d5db;
+    border-radius: 0.375rem;
 }
 
-.content {
-    flex-grow: 1;
-    padding: 20px;
-    overflow-y: auto;
+#search-input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #3b82f6;
 }
 
-.markdown-body {
-    box-sizing: border-box;
-    min-width: 200px;
-    max-width: 980px;
-    margin: 0 auto;
-    padding: 45px;
+/* Search button styles */
+button {
+    margin-top: 0.5rem;
+    width: 100%;
+    background-color: #3b82f6;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    transition: background-color 0.3s;
 }
 
-@media (max-width: 767px) {
-    .markdown-body {
-        padding: 15px;
-    }
-    
-    .container {
-        flex-direction: column;
-    }
-    
-    .sidebar {
-        width: 100%;
-        height: auto;
-    }
+button:hover {
+    background-color: #2563eb;
 }
 
+/* Chapter list styles */
 #chapter-list {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Markdown content styles */
+.markdown-content {
+    font-size: 1rem;
+    line-height: 1.5;
+    max-width: none;
+}
+
+@media (min-width: 640px) {
+    .markdown-content {
+        font-size: 1.125rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .markdown-content {
+        font-size: 1.25rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .markdown-content {
+        font-size: 1.5rem;
+    }
+}
+
+/* Custom styles for markdown content */
+#markdown-content {
+    color: #2d3748;
+}
+
+#markdown-content h1 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+
+#markdown-content h2 {
+    font-size: 1.875rem;
+    font-weight: 600;
+    margin-bottom: 1.25rem;
+}
+
+#markdown-content h3 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+#markdown-content h4 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    margin-bottom: 0.75rem;
+}
+
+#markdown-content h5 {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+#markdown-content h6 {
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+#markdown-content p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+#markdown-content ul, #markdown-content ol {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+#markdown-content li {
+    margin-bottom: 0.5rem;
+    margin-left: 1rem;
+    list-style-type: disc;
+}
+
+#markdown-content ol li {
+    margin-left: 1rem;
+    list-style-type: decimal;
+}
+
+#markdown-content ul ul, #markdown-content ol ul {
+    margin-left: 1rem;
+    list-style-type: circle;
+}
+
+#markdown-content ul ul ul, #markdown-content ol ul ul {
+    margin-left: 1rem;
+    list-style-type: square;
+}
+
+#markdown-content pre {
+    background-color: #f7fafc;
+    padding: 1rem;
+    border-radius: 0.375rem;
+    overflow-x: auto;
+    margin-bottom: 1rem;
+}
+
+#markdown-content code {
+    background-color: #f7fafc;
+    padding: 0.125rem 0.25rem;
+    border-radius: 0.25rem;
+    font-size: 0.875rem;
+}
+
+#markdown-content a {
+    color: #3b82f6;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+#markdown-content a:hover {
+    color: #2563eb;
+}
+
+#markdown-content a:visited {
+    color: #7c3aed;
+}
+
+#markdown-content a:active {
+    color: #1d4ed8;
+}
+
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+    @apply w-2;
+}
+
+::-webkit-scrollbar-track {
+    @apply bg-gray-200;
+}
+
+::-webkit-scrollbar-thumb {
+    @apply bg-gray-400 rounded;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    @apply bg-gray-500;
+}
+
+#toc-sidebar {
+    font-size: 0.875rem; /* 14px */
+}
+
+#toc-sidebar h2 {
+    font-size: 1.125rem; /* 18px */
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+#toc-sidebar ul {
     list-style-type: none;
     padding: 0;
 }
 
-#chapter-list li {
-    margin-bottom: 10px;
+#toc-sidebar li {
+    margin-bottom: 0.25rem;
 }
 
-#chapter-list a {
-    text-decoration: none;
-    color: #0366d6;
+#toc-sidebar a {
+    color: #2563eb;
 }
 
-#chapter-list a:hover {
+#toc-sidebar a:hover {
+    color: #1e40af;
     text-decoration: underline;
 }
+
+#toc-sidebar .toc-level-2 {
+    margin-left: 0;
+}
+
+#toc-sidebar .toc-level-3 {
+    margin-left: 1rem;
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Active section highlight */
+#toc-sidebar .active {
+    font-weight: 700;
+    color: #1e40af;
+}
+
+
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';

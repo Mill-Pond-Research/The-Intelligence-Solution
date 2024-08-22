@@ -1,4 +1,4 @@
-# Chapter 9 | Navigating Regulatory Frameworks for AI
+# Chapter 11 | Navigating Regulatory Frameworks for AI
 
 As AI increasingly becomes an integral component of the business and societal fabric, the need for robust regulatory frameworks grows ever more crucial. The frameworks provided in this book are designed not only to protect individual and public interests but also to provide companies with clear guidelines for responsible innovation and deployment of AI technologies. This chapter explores the implications of evolving regulatory landscapes on AI applications, examines influential regulations and guidelines worldwide, and proposes compliance strategies for companies to manage potential risks effectively.
 

@@ -1,4 +1,4 @@
-# Chapter 5: Hybrid Capabilities: Testing, Deployment, and Building
+# Chapter 7 | Hybrid Capabilities: Testing, Deployment, and Building
 
 As organizations stride into the future of artificial intelligence (AI), they are often faced with a strategic decision: should they deploy AI solutions on-premises, take advantage of cloud services, or adopt a combination of both? Hybrid capabilities in AI offer a blend of cloud-based and on-premises deployment, marrying the strengths of both to create flexible, powerful, and efficient AI-driven systems. This approach allows businesses to leverage the best of both worlds, optimizing their AI infrastructure for performance, cost-efficiency, and security.
 

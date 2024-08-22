@@ -1,0 +1,52 @@
+# Ignore compiled Python files
+*.pyc
+__pycache__/
+
+# Ignore virtual environment directories
+venv/
+env/
+.venv/
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+
+# Ignore log files
+*.log
+
+# Ignore package files
+*.egg-info/
+dist/
+build/
+
+# Ignore configuration files with sensitive information
+config.ini
+secrets.yaml
+
+# Ignore data files
+*.csv
+*.json
+*.xlsx
+
+# Ignore backup files
+*.bak
+*~
+
+# Ignore node modules
+node_modules/
+
+# Ignore coverage reports
+htmlcov/
+.coverage
+
+# Ignore Docker files
+.dockerignore
+Dockerfile
+docker-compose.yml
+

@@ -1,4 +1,4 @@
-# Chapter 12 | AI-Driven Decision Making: From Insights to Action
+# Chapter 5 | AI-Driven Decision Making: From Insights to Action
 
 The integration of Artificial Intelligence (AI) into business processes has ushered in a new era of decision-making, transforming how organizations leverage data to drive strategic choices. This chapter delves into the transformative power of AI as a catalyst for informed, strategic, and effective decision-making across various business domains.
 

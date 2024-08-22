@@ -1,4 +1,4 @@
-# Chapter 6 | Problem-Solution AI (PSAI) Framework
+# Chapter 8S | Problem-Solution AI (PSAI) Framework
 
 The Problem-Solution AI Framework (PSAI) is a structured approach that breaks down the Google Ventures Design Sprint methodology - among other Design Thinking solutions - into three key steps: problem definition, solution envisioning, and Minimum Viable Product (MVP) development. This chapter provides an in-depth explanation of the PSAI Framework, offering practical guidance and examples for applying it to solve real-world business challenges.
 

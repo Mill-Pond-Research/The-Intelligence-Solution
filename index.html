@@ -4,20 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Intelligence Solution: A Business Leader's Blueprint</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/3.0.8/marked.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github.min.css">
 </head>
-<body>
-    <div class="container">
-        <div class="sidebar">
-            <h2>Chapters</h2>
-            <ul id="chapter-list"></ul>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-white shadow-md">
+        <div class="container mx-auto px-4 py-6 text-center">
+            <h1 class="text-4xl font-bold text-gray-800">The Intelligence Solution</h1>
+            <h2 class="text-xl text-gray-600 mt-2">by Pete Shimshock</h2>
         </div>
-        <div class="content">
-            <div id="markdown-content" class="markdown-body"></div>
+    </header>
+    <div class="container mx-auto px-4 flex flex-col lg:flex-row">
+        <div class="w-full lg:w-1/5 p-4">
+            <div class="mb-4">
+                <input type="text" id="search-input" placeholder="Search chapters..." class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                <button onclick="searchContent(document.getElementById('search-input').value)" class="mt-2 w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300">Search</button>
+            </div>
+            <h2 class="text-2xl font-semibold mb-4">Chapters</h2>
+            <ul id="chapter-list" class="space-y-2"></ul>
+        </div>
+        <div class="w-full lg:w-3/5 p-4">
+            <div id="markdown-content" class="bg-white shadow-md rounded-lg p-6 prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-none"></div>
+        </div>
+        <div class="w-full lg:w-1/5 p-4">
+            <div id="toc-sidebar" class="bg-white shadow-md rounded-lg p-6 sticky top-4"></div>
         </div>
     </div>
     <script src="script.js"></script>

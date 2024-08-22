@@ -1,4 +1,4 @@
-# Chapter 8 | Overcoming Ethical Challenges in AI
+# Chapter 10 | Overcoming Ethical Challenges in AI
 
 The fusion of artificial intelligence (AI) into various sectors has prompted a surge of productivity and innovation. Nonetheless, this integration also raises significant ethical considerations, which, if overlooked, could undermine public trust and lead to repercussions beyond repair. This chapter takes an in-depth look at the ethical challenges posed by AI and articulates a clear pathway for organizations to navigate these complex issues.
 

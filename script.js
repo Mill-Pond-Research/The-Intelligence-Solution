@@ -18,11 +18,21 @@ const chapters = [
     { title: "15. Conclusion: Empowering Business Success with Intelligence as a Service", file: "docs/ch-15-conclusion-empowering-business-success-with-intelligence-as-a-service.md" }
 ];
 
-const baseUrl = 'https://millpondresearch.com/the-intelligence-solution/';
+const baseUrl = 'https://www.theintelligencesolution.com';
 
 function loadChapter(file) {
+    if (typeof marked === 'undefined') {
+        console.error('Marked library is not loaded');
+        return;
+    }
+
+    if (!file) {
+        console.error('No file specified for loading');
+        return;
+    }
+
     const xhr = new XMLHttpRequest();
-    const url = `${baseUrl}${file}`;
+    const url = new URL(file, baseUrl).href;
     
     showLoading();
     
@@ -30,19 +40,24 @@ function loadChapter(file) {
     xhr.onreadystatechange = function() {
         if (xhr.readyState === 4) {
             if (xhr.status === 200) {
-                const content = marked.parse(xhr.responseText);
-                document.getElementById('markdown-content').innerHTML = addIdsToHeadings(content);
-                
-                requestAnimationFrame(() => {
-                    const toc = generateTableOfContents(content);
-                    document.getElementById('toc-sidebar').innerHTML = toc;
-                    hljs.highlightAll();
-                    setupIntersectionObserver();
-                    setupMobileToC();
-                });
+                try {
+                    const content = marked.parse(xhr.responseText);
+                    document.getElementById('markdown-content').innerHTML = addIdsToHeadings(content);
+                    
+                    requestAnimationFrame(() => {
+                        const toc = generateTableOfContents(content);
+                        document.getElementById('toc-sidebar').innerHTML = toc;
+                        hljs.highlightAll();
+                        setupIntersectionObserver();
+                        setupMobileToC();
+                    });
 
-                localStorage.setItem(file, xhr.responseText);
-                console.log(`Successfully loaded and rendered: ${file}`);
+                    localStorage.setItem(file, xhr.responseText);
+                    console.log(`Successfully loaded and rendered: ${file}`);
+                } catch (error) {
+                    console.error(`Error parsing or rendering content: ${error.message}`);
+                    handleLoadError(file, 'parsing');
+                }
             } else {
                 console.error(`Error loading chapter: ${xhr.status} ${xhr.statusText}, File: ${file}, URL: ${url}`);
                 handleLoadError(file, xhr.status);
@@ -56,6 +71,7 @@ function loadChapter(file) {
     xhr.send();
 }
 
+
 function showLoading() {
     document.getElementById('markdown-content').innerHTML = '<div class="loading">Loading chapter...</div>';
 }
@@ -63,32 +79,43 @@ function showLoading() {
 function handleLoadError(file, status) {
     const cachedContent = localStorage.getItem(file);
     if (cachedContent) {
-        const content = marked.parse(cachedContent);
-        document.getElementById('markdown-content').innerHTML = addIdsToHeadings(content);
-        requestAnimationFrame(() => {
-            const toc = generateTableOfContents(content);
-            document.getElementById('toc-sidebar').innerHTML = toc;
-            hljs.highlightAll();
-            setupIntersectionObserver();
-            setupMobileToC();
-        });
-        console.log(`Loaded chapter from cache: ${file}`);
-    } else {
-        let errorMessage = `<p>Error loading chapter "${file}". `;
-        if (status === 404) {
-            errorMessage += 'The requested chapter could not be found. ';
-        } else if (status === 403) {
-            errorMessage += 'Access to the chapter is forbidden. ';
-        } else if (status === 500) {
-            errorMessage += 'There was a server error. ';
-        } else if (status === 'network') {
-            errorMessage += 'A network error occurred. Please check your internet connection. ';
-        } else {
-            errorMessage += 'An unexpected error occurred. ';
+        try {
+            const content = marked.parse(cachedContent);
+            document.getElementById('markdown-content').innerHTML = addIdsToHeadings(content);
+            requestAnimationFrame(() => {
+                const toc = generateTableOfContents(content);
+                document.getElementById('toc-sidebar').innerHTML = toc;
+                hljs.highlightAll();
+                setupIntersectionObserver();
+                setupMobileToC();
+            });
+            console.log(`Loaded chapter from cache: ${file}`);
+        } catch (error) {
+            console.error(`Error parsing cached content: ${error.message}`);
+            showErrorMessage(file, 'parsing');
         }
-        errorMessage += 'Please try again later or contact support if the problem persists.</p>';
-        document.getElementById('markdown-content').innerHTML = errorMessage;
+    } else {
+        showErrorMessage(file, status);
     }
+}
+
+function showErrorMessage(file, status) {
+    let errorMessage = `<p>Error loading chapter "${file}". `;
+    if (status === 404) {
+        errorMessage += 'The requested chapter could not be found. ';
+    } else if (status === 403) {
+        errorMessage += 'Access to the chapter is forbidden. ';
+    } else if (status === 500) {
+        errorMessage += 'There was a server error. ';
+    } else if (status === 'network') {
+        errorMessage += 'A network error occurred. Please check your internet connection. ';
+    } else if (status === 'parsing') {
+        errorMessage += 'There was an error processing the content. ';
+    } else {
+        errorMessage += 'An unexpected error occurred. ';
+    }
+    errorMessage += 'Please try again later or contact support if the problem persists.</p>';
+    document.getElementById('markdown-content').innerHTML = errorMessage;
 }
 
 function generateTableOfContents(content) {
@@ -306,3 +333,24 @@ window.addEventListener('resize', () => {
         tocSidebar.classList.add('hidden');
     }
 });
+
+function addBackToTopButton() {
+    const button = document.createElement('button');
+    button.innerHTML = '↑';
+    button.className = 'back-to-top hidden';
+    document.body.appendChild(button);
+  
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 100) {
+        button.classList.remove('hidden');
+      } else {
+        button.classList.add('hidden');
+      }
+    });
+  
+    button.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  }
+  
+  addBackToTopButton();

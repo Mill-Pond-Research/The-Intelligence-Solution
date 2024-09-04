@@ -3,36 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Intelligence Solution: A Business Leader's Blueprint</title>
+    <title>The Intelligence Solution: A Business Leader's AI Blueprint</title>
+    <meta name="description" content="Discover the essential guide for business leaders on leveraging artifical intelligence solutions. Learn strategies to transform your organization with AI and data-driven insights.">
+    <meta name="keywords" content="intelligence solution, business leadership, AI strategy, data-driven decision making, digital transformation">
+    <meta name="author" content="Mill Pond Research">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="The Intelligence Solution: A Business Leader's Blueprint">
+    <meta property="og:description" content="Essential guide for business leaders on leveraging artificial intelligence solutions and AI strategies.">
+    <meta property="og:image" content="https://millpondresearch.com/img/book-cover.png">
+    <meta property="og:url" content="https://millpondresearch.com/intelligence-solution">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="The Intelligence Solution: A Business Leader's AI Blueprint">
+    <meta name="twitter:description" content="Essential guide for business leaders on leveraging artifical intelligence solutions and AI strategies.">
+    <meta name="twitter:image" content="https://millpondresearch.com/img/book-cover.png">
+    <link rel="canonical" href="https://millpondresearch.com/intelligence-solution">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/3.0.8/marked.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/tailwind.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/github.min.css">
+    <link rel="stylesheet" href="https://use.typekit.net/wsy4yns.css">
 </head>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-3CC746FB57"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-3CC746FB57');
+</script>
+
 <body class="bg-gray-100 font-sans">
     <header class="bg-white shadow-md">
         <div class="container mx-auto px-4 py-6 text-center">
-            <h1 class="text-4xl font-bold text-gray-800">The Intelligence Solution</h1>
-            <h2 class="text-xl mt-2"><a href="https://millpondresearch.com/" class="text-blue-600 hover:text-blue-800 transition-colors duration-300 underline">Mill Pond Research</a></h2>
+            <div class="flex flex-col items-center mt-2">
+                <a href="https://millpondresearch.com/" class="transition-all duration-300 hover:filter hover:brightness-110">
+                    <img id="header-logo" src="img/mpr-name-100-white.png" alt="Mill Pond Research" class="max-w-full h-auto mb-4">
+                </a>
+                <h1 id="book-title" class="text-4xl font-bold text-white mt-4">The Intelligence Solution</h1>
+            </div>
         </div>
     </header>
     <div class="container mx-auto px-4 flex flex-col lg:flex-row">
-        <div class="w-full lg:w-1/5 p-4">
-            <div class="mb-4">
-                <input type="text" id="search-input" placeholder="Search chapters..." class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
-                <button onclick="searchContent(document.getElementById('search-input').value)" class="mt-2 w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300">Search</button>
+        <div id="left-sidebar" class="w-full lg:w-1/5 p-4 bg-white-color rounded-lg">
+            <button id="chapter-toggle" class="lg:hidden mb-4 w-full bg-blue-500 text-white py-2 px-4 rounded">
+                Show Chapters
+            </button>
+            <div id="chapter-sidebar" class="lg:block bg-white bg-white-color shadow-md rounded-lg p-6 mb-6 sticky top-4 max-h-[calc(100vh-2rem)] overflow-y-auto">
+                <h2 class="text-xl font-semibold mb-4">Chapters</h2>
+                <div class="mb-4 mt-4">
+                    <input type="text" id="search-input" placeholder="Search chapters..." class="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    <button onclick="searchContent(document.getElementById('search-input').value)" class="mt-2 w-full bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition duration-300">Search</button>
+                </div>
+                <ul id="chapter-list" class="space-y-2"></ul>
             </div>
-            <h2 class="text-2xl font-semibold mb-4">Chapters</h2>
-            <ul id="chapter-list" class="space-y-2"></ul>
         </div>
         <div class="w-full lg:w-3/5 p-4">
             <div id="markdown-content" class="bg-white shadow-md rounded-lg p-6 prose prose-sm sm:prose lg:prose-lg xl:prose-xl max-w-none"></div>
         </div>
         <div class="w-full lg:w-1/5 p-4">
-            <div id="toc-sidebar" class="bg-white shadow-md rounded-lg p-6 sticky top-4"></div>
+            <div id="right-sidebar" class="lg:block p-6 mb-6 top-4 bg-white rounded-lg">
+                <div id="toc-sidebar" class="mb-6">
+                    <h2 class="mb-4">Chapter Contents</h2>
+                    <!-- Table of Contents will be populated here -->
+                </div>
+                <div class="border-t border-gray-300 my-4"></div>
+                <div class="pt-6 mb-6">
+                    <h2 class="mb-4">Settings</h2>
+                    <label for="theme-toggle" class="flex items-center justify-between cursor-pointer p-3">
+                        <h2>Dark Mode</h2>
+                        <div class="relative">
+                            <input type="checkbox" id="theme-toggle" class="sr-only">
+                            <div class="w-11 h-6 bg-gray-200 rounded-full border border-gray-300 toggle-bg"></div>
+                            <div class="dot absolute left-1 top-1 bg-white w-4 h-4 rounded-full transition"></div>
+                        </div>
+                    </label>
+                </div>
+            </div>
         </div>
     </div>
+
     <script src="script.js"></script>
 </body>
 </html>

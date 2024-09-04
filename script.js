@@ -1,21 +1,22 @@
 const chapters = [
     { title: "Home", file: "docs/home.md" },
     { title: "Authors' Forward", file: "docs/authors-forward.md" },
-    { title: "1. Introduction", file: "docs/ch-01-introduction.md" },
-    { title: "2. The Rise of AI", file: "docs/ch-02-the-rise-of-ai.md" },
-    { title: "3. Understanding Intelligence as a Service", file: "docs/ch-03-understanding-intelligence-as-a-service.md" },
-    { title: "4. Leveraging AI for Advanced Customer Experience", file: "docs/ch-04-leveraging-ai-for-advanced-customer-experience.md" },
-    { title: "5. AI-Driven Decision Making: From Insights to Action", file: "docs/ch-05-ai-driven-decision-making-from-insights-to-action.md" },
-    { title: "6. The Need for Model Agnostic Frameworks", file: "docs/ch-06-the-need-for-model-agnostic-frameworks.md" },
-    { title: "7. Hybrid Capabilities: Testing + Deployment + Building", file: "docs/ch-07-hybrid-capabilties-testing-deployment-building.md" },
-    { title: "8. PSAI Framework", file: "docs/ch-08-psai-framework.md" },
-    { title: "9. Realizing the Value of AI: ROI Analysis", file: "docs/ch-09-realizing-the-value-of-ai-roi-analysis.md" },
-    { title: "10. Overcoming Ethical Challenges in AI", file: "docs/ch-10-overcoming-ethical-challenges-in-ai.md" },
-    { title: "11. Navigating Regulatory Frameworks for AI", file: "docs/ch-11-navigating-regulatory-frameworks-for-ai.md" },
-    { title: "12. Building an AI-Ready Organization", file: "docs/ch-12-building-an-ai-ready-organization.md" },
-    { title: "13. Future of AI: Emerging Technologies and Trends", file: "docs/ch-13-future-of-ai-emerging-technologies-and-trends.md" },
-    { title: "14. Implementing AI: Best Practices and Lessons Learned", file: "docs/ch-14-implementing-ai-best-practices-and-lessons-learned.md" },
-    { title: "15. Conclusion: Empowering Business Success with Intelligence as a Service", file: "docs/ch-15-conclusion-empowering-business-success-with-intelligence-as-a-service.md" }
+    { title: "Introduction", file: "docs/introduction.md" },
+    { title: "The Rise of AI", file: "docs/the-rise-of-ai.md" },
+    { title: "Cognitive Compression and Task Optimization", file: "docs/cognative-compression-and-task-optimization.md" },
+    { title: "Understanding Intelligence as a Service", file: "docs/understanding-intelligence-as-a-service.md" },
+    { title: "Leveraging AI for Advanced Customer Experience", file: "docs/leveraging-ai-for-advanced-customer-experience.md" },
+    { title: "AI-Driven Decision Making: From Insights to Action", file: "docs/ai-driven-decision-making-from-insights-to-action.md" },
+    { title: "The Need for Model Agnostic Frameworks", file: "docs/the-need-for-model-agnostic-frameworks.md" },
+    { title: "Hybrid Capabilities: Testing + Deployment + Building", file: "docs/hybrid-capabilties-testing-deployment-building.md" },
+    { title: "PSAI Framework", file: "docs/psai-framework.md" },
+    { title: "Realizing the Value of AI: ROI Analysis", file: "docs/realizing-the-value-of-ai-roi-analysis.md" },
+    { title: "Overcoming Ethical Challenges in AI", file: "docs/overcoming-ethical-challenges-in-ai.md" },
+    { title: "Navigating Regulatory Frameworks for AI", file: "docs/navigating-regulatory-frameworks-for-ai.md" },
+    { title: "Building an AI-Ready Organization", file: "docs/building-an-ai-ready-organization.md" },
+    { title: "Future of AI: Emerging Technologies and Trends", file: "docs/future-of-ai-emerging-technologies-and-trends.md" },
+    { title: "Implementing AI: Best Practices and Lessons Learned", file: "docs/implementing-ai-best-practices-and-lessons-learned.md" },
+    { title: "Empowering Business Success with Intelligence as a Service", file: "docs/empowering-business-success-with-intelligence-as-a-service.md" }
 ];
 
 const baseUrl = 'https://www.theintelligencesolution.com';
@@ -122,7 +123,7 @@ function generateTableOfContents(content) {
     const headings = content.match(/<h([2-3]).*?>(.*?)<\/h[2-3]>/g);
     if (!headings) return '';
 
-    let toc = '<h2>Chapter Contents</h2><ul>';
+    let toc = '<h3>Chapter Contents</h3><ul>';
     const idMap = new Map();
 
     headings.forEach(heading => {
@@ -318,20 +319,18 @@ function showLoading() {
     document.getElementById('markdown-content').innerHTML = '<div class="loading">Searching...</div>';
 }
 
-
 window.addEventListener('load', () => {
     populateChapterList();
     loadChapter(chapters[0].file);
     updateActiveChapter(0);
+    setupChapterSidebar();
+    setupMobileToC();
+    handleResponsiveSidebars();
+    setupThemeToggle();
 });
 
 window.addEventListener('resize', () => {
-    const tocSidebar = document.getElementById('toc-sidebar');
-    if (window.innerWidth >= 1024) {
-        tocSidebar.classList.remove('hidden');
-    } else {
-        tocSidebar.classList.add('hidden');
-    }
+    handleResponsiveSidebars();
 });
 
 function addBackToTopButton() {
@@ -354,3 +353,69 @@ function addBackToTopButton() {
   }
   
   addBackToTopButton();
+
+  function setupChapterSidebar() {
+    const chapterSidebar = document.getElementById('chapter-sidebar');
+    const chapterToggle = document.getElementById('chapter-toggle');
+    
+    chapterToggle.addEventListener('click', () => {
+        chapterSidebar.classList.toggle('hidden');
+        chapterToggle.textContent = chapterSidebar.classList.contains('hidden') ? 'Show Chapters' : 'Hide Chapters';
+    });
+
+    // Initially hide the chapter sidebar on mobile
+    if (window.innerWidth < 1024) {
+        chapterSidebar.classList.add('hidden');
+    }
+}
+
+function handleResponsiveSidebars() {
+    const chapterSidebar = document.getElementById('chapter-sidebar');
+    const tocSidebar = document.getElementById('toc-sidebar');
+    const chapterToggle = document.getElementById('chapter-toggle');
+    const tocToggle = document.querySelector('.toc-toggle');
+
+    if (window.innerWidth >= 1024) {
+        chapterSidebar.classList.remove('hidden');
+        tocSidebar.classList.remove('hidden');
+        chapterToggle.classList.add('hidden');
+        tocToggle.classList.add('hidden');
+    } else {
+        chapterSidebar.classList.add('hidden');
+        tocSidebar.classList.add('hidden');
+        chapterToggle.classList.remove('hidden');
+        tocToggle.classList.remove('hidden');
+        chapterToggle.textContent = 'Show Chapters';
+        tocToggle.textContent = 'Show Table of Contents';
+    }
+}
+
+function setupThemeToggle() {
+    const themeToggle = document.getElementById('theme-toggle');
+    const prefersDarkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+
+    // Function to set the theme
+    function setTheme(isDark) {
+        document.documentElement.classList.toggle('dark', isDark);
+        localStorage.setItem('theme', isDark ? 'dark' : 'light');
+        themeToggle.checked = isDark;
+    }
+
+    // Check for saved theme preference or use the system preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme === 'dark' || (!savedTheme && prefersDarkScheme.matches)) {
+        setTheme(true);
+    }
+
+    // Toggle theme when the switch is clicked
+    themeToggle.addEventListener('change', (e) => {
+        setTheme(e.target.checked);
+    });
+
+    // Listen for changes in system theme preference
+    prefersDarkScheme.addEventListener('change', (e) => {
+        setTheme(e.matches);
+    });
+}
+
+

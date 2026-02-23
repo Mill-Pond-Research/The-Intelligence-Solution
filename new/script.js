@@ -1,8 +1,8 @@
 const chapters = [
     { title: "Home", file: "./docs/home.md", slug: "home" },
+    { title: "Authors' Forward", file: "./docs/authors-forward.md", slug: "authors-forward" },
     { title: "Introduction", file: "./docs/introduction.md", slug: "introduction" },
     { title: "The Rise of AI", file: "./docs/the-rise-of-ai.md", slug: "the-rise-of-ai" },
-    { title: "The Risks of AI", file: "./docs/the-risks-of-ai.md", slug: "the-risks-of-ai" },
     { title: "What is the Intelligence Solution?", file: "./docs/the-intelligence-solution.md", slug: "what-is-the-intelligence-solution" },
     { title: "The Private AI Revolution", file: "./docs/private-ai-revolution.md", slug: "private-ai-revolution" },
     { title: "Leveraging AI for Advanced Customer Experience", file: "./docs/leveraging-ai-for-advanced-customer-experience.md", slug: "leveraging-ai-for-advanced-customer-experience" },

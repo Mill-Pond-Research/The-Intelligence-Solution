@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Sidebar Test</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="stylesheet" href="/css/tailwind.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+    <link rel="stylesheet" href="/css/mobile.css">
+    <style>
+        /* Test styles */
+        body {
+            padding: 20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        }
+        .test-content {
+            height: 2000px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 8px;
+        }
+        .test-section {
+            height: 300px;
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        /* Generate a lot of items for the sidebar to test scrolling */
+        .test-sidebar {
+            max-height: calc(100vh - 160px);
+            overflow-y: hidden;
+            transition: overflow-y 0.2s ease;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 20px;
+        }
+        .test-sidebar:hover {
+            overflow-y: auto;
+        }
+        .test-sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .test-sidebar li {
+            margin-bottom: 10px;
+            padding: 8px;
+            border-radius: 4px;
+        }
+        .test-sidebar li:hover {
+            background-color: #f0f0f0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Static Sidebar Test</h1>
+    <p>Scroll down to see how the sidebar stays in place. Hover over the sidebar to enable scrolling.</p>
+    
+    <div class="container mx-auto px-0 flex flex-col lg:flex-row lg:space-x-6">
+        <!-- Left sidebar -->
+        <div class="w-full lg:w-1/5 p-0 lg:p-4">
+            <div class="test-sidebar">
+                <h2>Test Sidebar</h2>
+                <p>Hover over this sidebar to enable scrolling</p>
+                <ul>
+                    <li><a href="#">Item 1</a></li>
+                    <li><a href="#">Item 2</a></li>
+                    <li><a href="#">Item 3</a></li>
+                    <li><a href="#">Item 4</a></li>
+                    <li><a href="#">Item 5</a></li>
+                    <li><a href="#">Item 6</a></li>
+                    <li><a href="#">Item 7</a></li>
+                    <li><a href="#">Item 8</a></li>
+                    <li><a href="#">Item 9</a></li>
+                    <li><a href="#">Item 10</a></li>
+                    <li><a href="#">Item 11</a></li>
+                    <li><a href="#">Item 12</a></li>
+                    <li><a href="#">Item 13</a></li>
+                    <li><a href="#">Item 14</a></li>
+                    <li><a href="#">Item 15</a></li>
+                    <li><a href="#">Item 16</a></li>
+                    <li><a href="#">Item 17</a></li>
+                    <li><a href="#">Item 18</a></li>
+                    <li><a href="#">Item 19</a></li>
+                    <li><a href="#">Item 20</a></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Main content -->
+        <div class="w-full lg:w-3/5 p-0 lg:p-4">
+            <div class="test-content">
+                <h2>Main Content</h2>
+                <p>This is the main content area. Scroll down to see how the sidebar stays in place.</p>
+                
+                <div class="test-section">
+                    <h3>Section 1</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc vel nisl.</p>
+                </div>
+                
+                <div class="test-section">
+                    <h3>Section 2</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc vel nisl.</p>
+                </div>
+                
+                <div class="test-section">
+                    <h3>Section 3</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc vel nisl.</p>
+                </div>
+                
+                <div class="test-section">
+                    <h3>Section 4</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam euismod, nisl eget aliquam ultricies, nunc nisl aliquet nunc, quis aliquam nisl nunc vel nisl.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right sidebar -->
+        <div class="w-full lg:w-1/5 p-0 lg:p-4">
+            <div class="test-sidebar">
+                <h2>Table of Contents</h2>
+                <p>Hover over this sidebar to enable scrolling</p>
+                <ul>
+                    <li><a href="#">Section 1</a></li>
+                    <li><a href="#">Section 2</a></li>
+                    <li><a href="#">Section 3</a></li>
+                    <li><a href="#">Section 4</a></li>
+                    <li><a href="#">Subsection 4.1</a></li>
+                    <li><a href="#">Subsection 4.2</a></li>
+                    <li><a href="#">Subsection 4.3</a></li>
+                    <li><a href="#">Section 5</a></li>
+                    <li><a href="#">Section 6</a></li>
+                    <li><a href="#">Section 7</a></li>
+                    <li><a href="#">Section 8</a></li>
+                    <li><a href="#">Section 9</a></li>
+                    <li><a href="#">Section 10</a></li>
+                    <li><a href="#">Section 11</a></li>
+                    <li><a href="#">Section 12</a></li>
+                    <li><a href="#">Section 13</a></li>
+                    <li><a href="#">Section 14</a></li>
+                    <li><a href="#">Section 15</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

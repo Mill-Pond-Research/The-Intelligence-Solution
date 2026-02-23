@@ -16,7 +16,7 @@ This book is authored by Mill Pond Research, a leading authority in business int
 The book is structured to guide readers through the process of understanding, planning, and implementing AI solutions in their organizations. Each chapter builds upon the previous, providing a comprehensive roadmap for AI adoption.
 
 ## Additional Resources
-- Visit our website: [https://intelligencesolution.com](https://intelligencesolution.com)
+- Visit our website: [https://theintelligencesolution.com](https://theintelligencesolution.com)
 - Follow us on social media for updates and insights
 - Join our mailing list for exclusive content and updates
 
@@ -25,4 +25,4 @@ For inquiries or additional information, please contact:
 - Email: info@millpondresearch.com
 - Website: [https://millpondresearch.com](https://millpondresearch.com)
 
-© 2024 Mill Pond Research. All rights reserved.
+© 2026 Mill Pond Research Inc. All rights reserved.

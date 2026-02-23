@@ -18,7 +18,7 @@ Founded in 2023, [Mill Pond Research](https://millpondresearch.com/) is at the f
 
 ## What's Inside
 
-- A transformative vision illuminating tomorrow's possibilities.
+- Fundamentals of Intelligence as a Service (IaaS)
 - The emergence and importance of dedicated intelligence departments
 - Model agnostic frameworks for flexible AI integration
 - Ethical considerations in AI adoption and use
@@ -29,32 +29,30 @@ Founded in 2023, [Mill Pond Research](https://millpondresearch.com/) is at the f
 
 ## Versions
 
-- Version 1.5 - Infrastructure Edition [Current]
-  - Updated May 2025
+- Version 1.2 - Foundational Edition [Current]
+  - Updated August 2024
 
 ## Section Overview
 
-- The Rise of AI
-- The Risks of AI
-- What is the Intelligence Solution?
-- The Private AI Revolution
-- Leveraging AI for Advanced Customer Experience
+- The AI Revolution in Business
+- The Rise of Artificial Intelligence: Historical context and future potential
+- Understanding Intelligence as a Service (IaaS)
+- Leveraging AI for Enhanced Customer Experiences
 - AI-Driven Decision Making: From Insights to Action
 - The Need for Model Agnostic Frameworks
-- Hybrid Capabilities: Testing + Deployment + Building
-- Cognitive Compression
-- PSAI Framework
+- Hybrid Capabilities: Testing, Deployment, and Building
+- Problem-Solution AI (PSAI) Framework
 - Realizing the Value of AI: ROI Analysis
 - Overcoming Ethical Challenges in AI
 - Navigating Regulatory Frameworks for AI
 - Building an AI-Ready Organization
-- Future of AI: Emerging Technologies and Trends
-- Implementing AI: Best Practices and Lessons Learned
-- Empowering Business Success with Intelligence
+- The Future of AI - Emerging Technologies and Trends
+- AI Implementation: Best Practices and Lessons from the Field
+- Empowering Business Success with Intelligence as a Service
 
 ## About the Author
 
-Pete Shimshock is the co-founder and Chief AI Officer (CAIO) of Mill Pond Research. As an award-winning system architect and technologist.
+Pete Shimshock is the co-founder and Chief AI Officer (CAIO) of Mill Pond Research. As an award-winning system architect and technologist, Pete brings a wealth of practical AI strategy and implementation experience to this guide. He manages Ask Alpha, a professional AI workbench, a generative AI workspace with multiple LLM models, plugins, and AI agents.
 
 ## Why This Book Matters
 
@@ -65,7 +63,7 @@ In today's fast-paced business world, understanding and implementing AI is cruci
 - Solutions to common AI implementation challenges
 - Guidance on ethical AI deployment and best practices
 
-Discover how AI can drive your business forward. Read the "The Intelligence Solution"  to position your organization at the forefront of the AI revolution. Whether you aim to streamline operations, enhance customer experiences, or spark innovation, this book provides the knowledge and strategies needed to effectively leverage AI in your business journey.
+Discover how AI can drive your business forward. Download "The Intelligence Solution: A Business Leader's Blueprint" today and position your organization at the forefront of the AI revolution. Whether you aim to streamline operations, enhance customer experiences, or spark innovation, this book provides the knowledge and strategies needed to effectively leverage AI in your business journey.
 
 ## Mill Pond Research: Core Capabilities
 
@@ -78,15 +76,19 @@ Discover how AI can drive your business forward. Read the "The Intelligence Solu
 
 ## Mill Pond Research: AI Solutions
 
-Founded in 2023 by brothers Andrew and Pete Shimshock, Mill Pond Research has evolved from a professional services organization to a software company at the forefront of the agentic AI revolution. As members of the US AI Safety Institute Consortium, we bring unparalleled knowledge of AI regulations and best practices to our enterprise solutions.
+1. WorkBench: Generative AI workspace with multiple LLM models, plugins, and AI agents through integrations or file upload. Perfect for organizations exploring AI capabilities.
 
-Our flagship product, Xilos, represents the future of enterprise agentic AI infrastructure - providing comprehensive security, orchestration, and refinement capabilities for organizations deploying AI at scale. We complement our software offerings with professional services to ensure successful implementation and adoption.
+2. PowerTool: Custom-built AI agent to be integrated into customer or employee environments. Ideal for specific use cases and enhancing existing workflows.
 
+3. SandBox: Hybrid private in-house AI solution – powers custom experiences for customers or employees. Perfect for organizations requiring high levels of data security and privacy.
+
+4. Decision Engine: Comprehensive end-to-end analytics platform for B2B lead generation and customer experience optimization. Elevates high-CLV customers to marketing and supplier partners.
 
 ## Contact Us
 
 For more information or to get started with Mill Pond Research's AI solutions:
 
 - Email: [Contact Mill Pond Research](https://millpondresearch.com/#contact)
+- Try Ask Alpha: [Sign up for WorkBench](https://ask-alpha.com/)
 
 Join us in revolutionizing business intelligence with AI!

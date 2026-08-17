@@ -231,3 +231,35 @@ Viewing ROI analysis as an ongoing process rather than a one-time calculation is
 Example: A logistics company using AI for route optimization might start with quarterly reviews of fuel savings and delivery times. Over time, this could evolve into a more comprehensive analysis including customer satisfaction trends, driver retention rates, and the company's carbon footprint reduction, all continuously benchmarked against industry standards and feeding into ongoing AI development and deployment strategies.
 
 In conclusion, realizing the full value of AI investments requires a sophisticated and dynamic approach to ROI analysis. By embracing a comprehensive framework that considers both quantitative and qualitative factors, maintains flexibility, and views ROI as a continuous process, organizations can not only justify their AI expenditures but also strategically guide their AI initiatives to maximize long-term value creation. As AI continues to evolve and reshape the business landscape, the ability to accurately assess and communicate the value of AI initiatives will be a key differentiator for successful organizations.
+
+---
+
+## Addendum: The New Realities of AI Economics (Mid-2026)
+
+The rapid evolution of the AI market through 2026 has introduced several new dynamics that directly impact ROI calculations for business leaders.
+
+### The Bifurcation of AI Pricing
+
+The AI model market is splitting into two distinct tiers with vastly different cost structures: **reasoning models** (premium, chain-of-thought, high-complexity) and **scale models** (commodity, high-volume, low-latency) ([IBTimes, Aug 2026](https://www.ibtimes.sg)). Google's Gemini 3.7 Flash dropped to $0.75/1M input tokens — a 50% cut — while premium frontier models remain significantly more expensive. This bifurcation means organizations must carefully match use cases to model tiers to avoid overpaying for routine tasks.
+
+### The Token Cost Illusion
+
+Despite falling per-token prices — Google halving Gemini 3.7 Flash, OpenAI cutting its cheapest tiers by 80% — enterprise AI spending continues to rise. The average enterprise LLM budget now sits at approximately $7M annually, with total costs driven by exploding consumption volumes rather than unit pricing ([Forbes, Jul 2026](https://www.forbes.com)). A Forbes analysis notes this creates a "Token Cost Illusion": legal departments and other functions find budgets under pressure because lower costs simply enable more usage, not lower bills ([Law.com, Aug 2026](https://www.law.com)).
+
+### The Open-Source Economics Gap
+
+Enterprise open-source AI spending collapsed from 19% to 11% of budgets, while closed models command 89% of the average $7M annual LLM budget — despite being 5–20× more expensive per token ([24/7 Wall St, Aug 2026](https://247wallst.com)). This counterintuitive dynamic means ROI models that simply compare per-token costs between open and closed models miss the larger picture of enterprise preference for managed services.
+
+### Cost-Maxxing and the New Optimization Frontier
+
+Terms like "tokenmaxxing" have entered the enterprise vocabulary — referring to strategies for optimizing token usage as inference costs become the dominant operational expense in AI ([Forbes Tech Council, Jul 2026](https://www.forbes.com)). Companies like Writer now claim 52% agent inference cost reductions with optimized models like Palmyra X6 ([VentureBeat, Aug 2026](https://venturebeat.com)). New services from 1Password, DoiT, and others have emerged specifically to track and manage token consumption across AI providers.
+
+### Implications for ROI Modeling
+
+When constructing ROI projections for AI initiatives in the current environment, business leaders should:
+
+1. **Use volume-based, not price-based, cost projections**: Model growing usage volumes that may offset per-unit price declines
+2. **Account for model tier selection**: Factor in the reasoning vs. scale bifurcation and route tasks accordingly
+3. **Include cost management infrastructure**: Budget for the new tools and processes needed to monitor and control AI spending
+4. **Consider the open-source total cost of ownership**: Factor in the operational cost of self-hosting vs. the premium for managed API access
+5. **Plan for dynamic pricing shifts**: Providers like DeepSeek have introduced peak/off-peak pricing that can significantly alter cost profiles ([Bloomberg, Aug 2026](https://www.bloomberg.com))
